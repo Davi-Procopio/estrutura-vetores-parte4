@@ -22,13 +22,13 @@ let salarios = [
 let mulheresDestaque = "";
 
 for (let i = 0; i < 4; i++) {
-    if ((sexos[i] == "F" || sexos[i] == "f") && salarios[i] > 5000) {
-        mulheresDestaque += nomes[i] + "\n";
+    if ((sexos[i] == "F" || sexos[i] == "f") && salarios[i] >= 5000) {
+        mulheresDestaque += nomes[i] + " (R$" + salarios[i].toFixed(2) + ")" + ".\n";
     }
 }
 
 if (mulheresDestaque != "") {
-    alert("As mulheres com salário maior que R$5000,00 são:\n" + mulheresDestaque);
+    alert("As mulheres com salário maior ou igual a R$5000,00 são:\n\n" + mulheresDestaque);
 } else {
     alert("Não há mulheres com salário maior que R$5000,00.");
 }
